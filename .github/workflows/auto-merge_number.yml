@@ -1,0 +1,13 @@
+name: dependabot number
+
+on:
+  pull_request_target:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: gh pr review "$GITHUB_HEAD_REF" --approve
+      - run: gh pr merge "$GITHUB_HEAD_REF" --auto --squash

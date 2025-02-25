@@ -1,0 +1,12 @@
+name: dependabot injection
+
+on:
+  pull_request_target:
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: injection
+        if: github.actor == 'dependabot[bot]'
+        run: git checkout ${{ github.head_ref }}
