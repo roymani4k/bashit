@@ -1,5 +1,3 @@
-Here is some valuable stuff
+# QuebecBashing
 
-This is gradma
-
-I love you?
+A testiing repository for Canada's finest.
