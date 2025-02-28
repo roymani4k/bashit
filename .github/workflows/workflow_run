@@ -1,0 +1,13 @@
+name: bacon
+
+on:
+  workflow_run:
+    workflows: 
+      - "Approved"
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: injection
+        run: echo "test"
