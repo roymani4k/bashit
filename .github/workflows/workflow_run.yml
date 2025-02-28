@@ -3,7 +3,7 @@ name: bacon
 on:
   workflow_run:
     workflows: 
-      - "Approved"
+      - "ApprovalComment"
 
 jobs:
   poc:
